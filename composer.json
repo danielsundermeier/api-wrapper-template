@@ -1,0 +1,19 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Dasumi\\DummyNamespace\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dasumi\\DummyNamespace\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "dasumi/base-api-wrapper": "dev-master",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    }
+}
