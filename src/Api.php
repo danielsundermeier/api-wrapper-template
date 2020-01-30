@@ -2,12 +2,13 @@
 
 namespace Dasumi\DummyNamespace;
 
+use Dasumi\BaseApiWrapper\Client as BaseClient;
 use Dasumi\DummyNamespace\Api\Example;
-use Dasumi\BaseApiWrapper\Client;
+use Dasumi\DummyNamespace\Client;
 
 class Api extends \Dasumi\BaseApiWrapper\Api
 {
-    protected function getClient() : Client
+    protected function getClient() : BaseClient
     {
         return new Client([
             'base_uri' => 'http://httpbin.org',
@@ -15,7 +16,7 @@ class Api extends \Dasumi\BaseApiWrapper\Api
         ]);
     }
 
-    protected function setEndpoints(Client $client) : void
+    protected function setEndpoints(BaseClient $client) : void
     {
         $this->example = new Example($client);
     }
